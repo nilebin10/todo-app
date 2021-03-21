@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-Once branch is cloned or forked please run `npm install` to install all dependencies required for this project.
+Once branch is cloned or forked please run `npm ci` to install all dependencies required for this project.
 
 ## Development server
 
