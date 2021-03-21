@@ -1,0 +1,28 @@
+:host {
+  flex: 1;
+  /* margin-bottom: 10px; */
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.mat-card-header {
+  display: flex;
+}
+
+.mat-card-conte {
+  flex: 1;
+}
+
+.mat-checkbox {
+  flex-basis: 18px;
+  order: 1;
+}
+
+.mat-card-content > p {
+  padding: 0 18px;
+}

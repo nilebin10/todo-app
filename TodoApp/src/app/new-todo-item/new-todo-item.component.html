@@ -1,0 +1,30 @@
+<mat-card class="todo-item-card">
+    <mat-card-content>
+    <form class="todo-update-form">
+        <div class="field-row-one">
+                    <mat-form-field class="todo-input-field">
+                        <mat-label>Label</mat-label>
+                        <input matInput placeholder="Add label" name="todoLabel" [(ngModel)]="todo.label" (keydown)="onKeyDown($event)">
+                    </mat-form-field>
+                    
+                    <mat-form-field class="todo-select-field">
+                        <mat-label>Priority</mat-label>
+                        <mat-select [(value)]="todo.priority" name="todoPriority">
+                            <mat-option *ngFor="let priority of PriorityData" [value]="priority.key">
+                                {{priority.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+        </div>
+
+        <mat-form-field class="todo-input-field">
+            <mat-label>Detail</mat-label>
+            <textarea matInput [(ngModel)]="todo.detail" name="todoDetail" placeholder="Enter details here..." (keydown)="onKeyDown($event)"></textarea>
+        </mat-form-field>
+    </form>
+    </mat-card-content>
+    <mat-card-footer>
+        <button mat-raised-button color="primary" (click)="addNewItem(todo)">{{todo.id === null ? 'Add' : 'Update'}}</button>
+        <button mat-raised-button color="accent" (click)="cancelNewItem()">Cancel</button>
+    </mat-card-footer>
+</mat-card>

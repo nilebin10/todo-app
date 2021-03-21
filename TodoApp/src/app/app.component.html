@@ -1,0 +1,24 @@
+<header>
+  <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>TODO App</span>
+          <span class="example-spacer"></span>
+              <mat-checkbox class="example-margin" [checked]="allSelected" [color]="'primary'" [indeterminate]="isIndetermined" (change)="selectAll($event.checked)">
+                Select All
+              </mat-checkbox>
+          <button mat-icon-button (click)="addNewTodo()">
+            <mat-icon>add_box</mat-icon>
+          </button>
+        </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+<main>
+  <ng-template [ngIf]="showNewItemForm">
+    <app-new-todo-item [todo]="todo" (cancelNew)="cancelNewForm()"></app-new-todo-item>
+  </ng-template>
+  
+  <section>
+    <app-todo-list #todoListCmp [todos]="todos"></app-todo-list>
+  </section>
+</main>
+<footer></footer>

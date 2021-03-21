@@ -1,0 +1,16 @@
+<mat-card class="todo-item-card" (dblclick)="onDoubleclick($event)" (focusout)="onFocusLost($event)">
+    <ng-template [ngIf]="!editing">
+        <mat-card-header>
+            <mat-card-title>{{todo.label}}</mat-card-title>
+            <mat-card-subtitle>{{todo.priority}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{todo.detail}}</p>
+        </mat-card-content>
+    </ng-template>
+
+    <ng-template [ngIf]="editing">
+        <app-new-todo-item [todo]="todo" (cancelNew)="cancelNewForm()"></app-new-todo-item>
+    </ng-template>
+
+</mat-card>

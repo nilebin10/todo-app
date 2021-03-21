@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-row-one {
+  display: flex;
+  width: 100%;
+}
+
+.field-row-one .todo-input-field {
+  flex: 3;
+  margin-right: 15px;
+}
+
+.field-row-one .todo-select-field {
+  flex: 1 0 80px;
+}
+
+.mat-card-footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.mat-card-content {
+  margin: 0;
+}
+
+.mat-card-footer button {
+  margin: 0 5px;
+}

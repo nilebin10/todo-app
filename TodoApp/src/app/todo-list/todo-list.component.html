@@ -1,0 +1,13 @@
+<!-- <mat-list>
+    <mat-list-item class="todo-list-item" *ngFor="let todo of todos">
+        <app-todo-list-item [todo]="todo"></app-todo-list-item>
+    </mat-list-item>
+</mat-list> -->
+
+<mat-selection-list #selectionList [compareWith]="copmareWith" [disableRipple]="true">
+    <ng-container *ngFor="let todo of todos">
+        <mat-list-option class="todo-list-item" [selected]="todo.selected" [checkboxPosition]="'before'" [value]="todo.id">
+            <app-todo-list-item [todo]="todo"></app-todo-list-item>
+        </mat-list-option>
+    </ng-container>
+</mat-selection-list>
